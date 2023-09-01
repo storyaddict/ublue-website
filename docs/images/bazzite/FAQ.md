@@ -1,4 +1,9 @@
-# How do I install Bazzite onto my device?
+# FAQ
+
+## Why is it called Bazzite?
+
+Fedora's image-based variants are usually named after either [minerals](https://fedoraproject.org/kinoite/) or [flowers](https://fedoraproject.org/sericea/).
+## How do I install Bazzite onto my device?
 
 Follow this [guide](/images/bazzite/installation/).
 
@@ -53,8 +58,7 @@ You can use [other distributions](https://github.com/89luca89/distrobox/blob/mai
 
 ### Nix
 
-If you opted to use Nix packages at the first boot, then they can be installed by entering:  
-`nix-env --install <package>` in a host terminal.  Click [here](https://search.nixos.org/packages) to search for Nix packages.
+If you opted to use Nix packages at the first boot, then you can use the Nix package manager.  More information on that [here](https://zero-to-nix.com/).
 
 ### rpm-ostree
 
@@ -89,8 +93,12 @@ No. Bazzite is not a distribution. This is Fedora Kinoite/Silverblue (depending 
 
 Unlike traditional Linux distributions, much of the maintenance and security updates are done upstream by Fedora and Universal Blue while Bazzite only configures a great gaming experience out of the box. Check the [mission statement](/mission) for more information.
 
-# Why run Steam in an Arch Linux Distrobox container as opposed to Flatpak?
+## For the desktop edition, why run Steam in an Arch Linux Distrobox container as opposed to Flatpak?
 
 Steam is not built with flatpak in mind. Valve does not contribute to it, and as a result there are many workarounds that the Arch package does not have to worry about it. The Steam Deck uses the Arch package, and to stay consistent with SteamOS so do we.
 
 Also currently there is a [minor performance impact](https://github.com/flatpak/flatpak/issues/4187) if you run/attempt to run Flatpak games. However you would really only notice this in edge cases anyways.
+
+# Why isn't Night Mode or color saturation working on my Steam Deck?
+
+For some users, Night Mode or color saturation settings only seem to work when in the home screen or when the QAM or Steam menus are present. To fix this, enable Developer Mode in Settings, General. Then, in the newly accessible Developer menu at the bottom of Settings, enable Force Composite.
